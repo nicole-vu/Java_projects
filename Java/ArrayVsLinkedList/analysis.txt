@@ -1,0 +1,37 @@
+Write an analysis of the complexity of these four methods:
+add(T element) method
+ArrayList Runtime: O(n)
+LinkedList Runtime: O(1)
+Explanation: We only need to take a fixed number of steps when adding a new Node
+to a LinkedList so it is O(1). The tail value to add the next element will be
+updated for each added element.  Therefore the only action done is to add the
+next value to the list. For ArrayList, because we need to resize the array every
+time the list is full, therefore, in the worst case, the time complexity would
+be O(n).
+
+rotate(int n) method
+ArrayList Runtime: O(n)
+LinkedList Runtime: O(n)
+Explanation:  ArrayList moves each element one index to the right (moving each
+value up an index) and then sets the last element as the first value.This would
+be repeated for each rotation indicated so time complexity is
+O((rotation/size) * n) or O(n). The LinkedList will go through the entire list
+to find the last element of the list and then set its next value to the start
+value. This would also be repeated through the whole list so time complexity
+would be O(rotation * n) or O(n).
+
+merge(List<T>otherList) method
+ArrayList Runtime: O(n)
+LinkedList Runtime: O(n)
+Explanation: The ArrayList will copy each element of this array and other array
+one by one, so the time complexity is O(n). LinkedList will go through this list,
+which has O(n) complexity and add elements from other list to this list O(1), so
+the total time complexity is O(n).
+
+reverse() method.
+ArrayList Runtime: O(n)
+LinkedList Runtime: O(n)
+Explanation: The Array list will switch the head and the tail of the array, so
+the complexity is O(n/2) = O(n). The LinkedList will remove elements from the
+original list and attach it to the new list one by one, so the time complexity
+is O(n).
